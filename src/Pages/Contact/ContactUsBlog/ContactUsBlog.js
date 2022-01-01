@@ -14,29 +14,29 @@ const ContactUsBlog = () => {
         console.log(visitorEmail);
     }
     return (
-        <div>
+        <div className='mb-5'>
             <Container>
 
                 <Row>
-                    <Col>
-                        <Form.Control size="lg" type="text" placeholder="Your Name" onChange={handleOnChange} required name="name" />
-                        <Form.Control size="lg" type="text" placeholder="Your Email" onChange={handleOnChange} required name="email" />
-                        <Form.Control size="lg" type="text" placeholder="Your Subject" onChange={handleOnChange} required name="subject" />
-                        <Form.Control size="lg" type="text" placeholder="Your Message" onChange={handleOnChange} required name="message" />
-                        <button onClick={handleEmailSending}>Submit</button>
+                    <Col className="contact-us-blog-form">
+                        <Form.Control className="contact-us-blog-form-field" size="lg" type="text" placeholder="Your Name" onChange={handleOnChange} required name="name" />
+                        <Form.Control className="contact-us-blog-form-field" size="lg" type="text" placeholder="Your Email" onChange={handleOnChange} required name="email" />
+                        <Form.Control className="contact-us-blog-form-field" size="lg" type="text" placeholder="Your Subject" onChange={handleOnChange} required name="subject" />
+                        <Form.Control className="contact-us-blog-form-field" size="lg" type="text" placeholder="Your Message" onChange={handleOnChange} required name="message" />
+                        <button className="btn-contact-submit" onClick={handleEmailSending}>Send Massege</button>
                     </Col>
                     <Col>
                         <div className='contact-blog-title'>
                             <div>
-                                <h4 className="text-start">Contact Us</h4>
+                                <h4 className="text-start font-ubuntu">Contact Us</h4>
                                 <hr className='underlined-hr' />
                             </div>
-                            <h1 className="text-start">Get In Touch</h1>
-                            <p className="text-start">We become very happy after talking to a customer. When a customer knock us we try to response to him within 24 hour. You can connect with us through Email, Facebook, Twitter or you can visit our office and factory also. We cordially welcome you.</p>
+                            <h1 className="text-start font-oswald">Get In Touch</h1>
+                            <p className="text-start font-spline">We become very happy after talking to a customer. When a customer knock us we try to response to him within 24 hour. You can connect with us through Email, Facebook, Twitter or you can visit our office and factory also. We cordially welcome you.</p>
                         </div>
                         <div className='contact-blog-icons'>
                             <div className='contact-blog-icons-upper d-lg-flex d-md-flex justify-content-between'>
-                                <div className='d-flex justify-content-between mb-3 align-items-center'>
+                                <div className='d-flex justify-content-lg-between mb-3 align-items-center'>
                                     <div className='contact-blog-single-icon'>
                                         <i className="far fa-building"></i>
                                     </div>
@@ -45,7 +45,7 @@ const ContactUsBlog = () => {
                                         <h4 className="contact-blog-single-icon-h4">193/43 New Polton, Dhaka </h4>
                                     </div>
                                 </div>
-                                <div className='d-flex justify-content-between align-items-center'>
+                                <div className='d-flex justify-content-lg-between align-items-center'>
                                     <div className='contact-blog-single-icon'>
                                         <i className="fas fa-industry"></i>
                                     </div>
@@ -56,7 +56,7 @@ const ContactUsBlog = () => {
                                 </div>
                             </div>
                             <div className='contact-blog-icons-lower d-lg-flex d-md-flex justify-content-between'>
-                                <div className='d-flex align-items-center'>
+                                <div className='d-flex align-items-center justify-content-lg-between'>
                                     <div className='contact-blog-single-icon my-3'>
                                         <i class="fas fa-phone-volume"></i>
                                     </div>
@@ -65,7 +65,7 @@ const ContactUsBlog = () => {
                                         <h4 className='contact-blog-single-icon-h4'>+2986655510 </h4>
                                     </div>
                                 </div>
-                                <div className='d-flex justify-content-between align-items-center'>
+                                <div className='d-flex justify-content-lg-between align-items-center'>
                                     <div className='contact-blog-single-icon'>
                                         <i class="fas fa-envelope"></i>
                                     </div>
@@ -78,7 +78,7 @@ const ContactUsBlog = () => {
 
                         </div>
                         <div>
-                            <h4 className='text-start'>Our Social Media</h4>
+                            <h4 className='text-start font-ubuntu'>Our Social Media</h4>
                             <div className='text-start d-flex align-items-center'>
                                 <a href="/" className='contact-blog-social-icon d-flex flex-column justify-content-center align-items-center' style={{ backgroundColor: "blue" }}><i class="fab fa-facebook-f"></i></a>
                                 <a href="/" className='contact-blog-social-icon d-flex flex-column justify-content-center align-items-center' style={{ backgroundColor: "#1D9BF0" }}><i class="fab fa-twitter"></i></a>

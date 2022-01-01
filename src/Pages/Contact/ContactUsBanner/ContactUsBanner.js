@@ -9,7 +9,7 @@ const ContactUsBanner = () => {
                 <source src={factoryVideo} type="video/mp4" />
             </video>
             <div className='contact-us-banner-heading'>
-                <h1>Contact Us</h1>
+                <h1 className='font-roboto'>Contact Us</h1>
             </div>
 
         </div>

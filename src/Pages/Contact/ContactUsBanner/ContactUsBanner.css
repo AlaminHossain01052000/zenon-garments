@@ -17,14 +17,17 @@
   }
   .contact-us-banner-heading h1{
       color: white;
-      font-weight: 600;
+      font-weight: 500;
   }
   @media only screen and (max-width: 550px){
     .contact-us-banner-heading{
         position: static;
         
     }
-  
+    #factoryVideo{
+    width: 100%;
+    height: 100%;
+    }
     
 }
 
