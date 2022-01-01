@@ -5,7 +5,7 @@ const ContactUsBanner = () => {
 
     return (
         <div className='contact-banner-video-container mb-5'>
-            <video loop="true" autoPlay="true" id="factoryVideo" >
+            <video loop={true} autoPlay={true} id="factoryVideo" >
                 <source src={factoryVideo} type="video/mp4" />
             </video>
             <div className='contact-us-banner-heading'>

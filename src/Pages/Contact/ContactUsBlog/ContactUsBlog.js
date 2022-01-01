@@ -58,7 +58,7 @@ const ContactUsBlog = () => {
                             <div className='contact-blog-icons-lower d-lg-flex d-md-flex justify-content-between'>
                                 <div className='d-flex align-items-center justify-content-lg-between'>
                                     <div className='contact-blog-single-icon my-3'>
-                                        <i class="fas fa-phone-volume"></i>
+                                        <i className="fas fa-phone-volume"></i>
                                     </div>
                                     <div>
                                         <h1 className='contact-blog-single-icon-h1'>Phone</h1>
@@ -67,7 +67,7 @@ const ContactUsBlog = () => {
                                 </div>
                                 <div className='d-flex justify-content-lg-between align-items-center'>
                                     <div className='contact-blog-single-icon'>
-                                        <i class="fas fa-envelope"></i>
+                                        <i className="fas fa-envelope"></i>
                                     </div>
                                     <div>
                                         <h1 className='contact-blog-single-icon-h1'>Email</h1>
@@ -80,14 +80,14 @@ const ContactUsBlog = () => {
                         <div>
                             <h4 className='text-start font-ubuntu'>Our Social Media</h4>
                             <div className='text-start d-flex align-items-center'>
-                                <a href="/" className='contact-blog-social-icon d-flex flex-column justify-content-center align-items-center' style={{ backgroundColor: "blue" }}><i class="fab fa-facebook-f"></i></a>
-                                <a href="/" className='contact-blog-social-icon d-flex flex-column justify-content-center align-items-center' style={{ backgroundColor: "#1D9BF0" }}><i class="fab fa-twitter"></i></a>
+                                <a href="/" className='contact-blog-social-icon d-flex flex-column justify-content-center align-items-center' style={{ backgroundColor: "blue" }}><i className="fab fa-facebook-f"></i></a>
+                                <a href="/" className='contact-blog-social-icon d-flex flex-column justify-content-center align-items-center' style={{ backgroundColor: "#1D9BF0" }}><i className="fab fa-twitter"></i></a>
 
-                                <a href="/" className='contact-blog-social-icon d-flex flex-column justify-content-center align-items-center' style={{ backgroundColor: "black" }}><i class="fab fa-instagram"></i></a>
+                                <a href="/" className='contact-blog-social-icon d-flex flex-column justify-content-center align-items-center' style={{ backgroundColor: "black" }}><i className="fab fa-instagram"></i></a>
 
-                                <a href="/" className='contact-blog-social-icon d-flex flex-column justify-content-center align-items-center' style={{ backgroundColor: "#0A66C2" }}><i class="fab fa-linkedin"></i></a>
+                                <a href="/" className='contact-blog-social-icon d-flex flex-column justify-content-center align-items-center' style={{ backgroundColor: "#0A66C2" }}><i className="fab fa-linkedin"></i></a>
 
-                                <a href="/" className='contact-blog-social-icon d-flex flex-column justify-content-center align-items-center' style={{ backgroundColor: "red" }}><i class="fab fa-youtube"></i></a>
+                                <a href="/" className='contact-blog-social-icon d-flex flex-column justify-content-center align-items-center' style={{ backgroundColor: "red" }}><i className="fab fa-youtube"></i></a>
                             </div>
                         </div>
                     </Col>
