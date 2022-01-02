@@ -15,6 +15,7 @@
     background-color: transparent;
     cursor: pointer;
     transition: .5s all;
+    margin-bottom: 2rem;
 }
 .ourServices .card:hover{
     color:#fff;
