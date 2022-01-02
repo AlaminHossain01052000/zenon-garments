@@ -11,7 +11,7 @@ const Header = () => {
         <div className="header">
             <nav className="navbar navbar-expand-lg">
                 <div className="container">
-                    <span className="navbar-brand mb-0 h1"><img width="180px" src={`${logo}`} alt="logo" /></span>
+                    <span className="navbar-brand mb-0 h1"><img style={{ width: "180px", cursor: 'pointer' }} src={`${logo}`} alt="logo" /></span>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <DehazeIcon />
                     </button>
