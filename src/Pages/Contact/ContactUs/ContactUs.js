@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../../../Header/header';
 import ContactFooter from '../ContactFooter/ContactFooter';
 import ContactUsBanner from '../ContactUsBanner/ContactUsBanner';
 import ContactUsBlog from '../ContactUsBlog/ContactUsBlog';
@@ -9,7 +8,6 @@ const ContactUs = () => {
     return (
         <div>
 
-            <Header></Header>
             <ContactUsBanner></ContactUsBanner>
             <ContactUsMap></ContactUsMap>
             <ContactUsBlog></ContactUsBlog>
