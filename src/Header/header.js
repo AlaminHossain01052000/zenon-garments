@@ -21,26 +21,26 @@ const Header = () => {
                                 <NavLink to='/home'>HOME</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to='/news/Covid-19'>ABOUT US</NavLink>
+                                <NavLink to='/aboutUs'>ABOUT US</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to='/news/Entertainment'>SERVICES</NavLink>
+                                <NavLink to='/services'>SERVICES</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to='/news/Travel'>PROJECTS</NavLink>
+                                <NavLink to='/projects'>PROJECTS</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to='/news/Business'>PAGE</NavLink>
+                                <NavLink to='/page'>PAGE</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to='/news/Sports'>BLOG</NavLink>
+                                <NavLink to='/blog'>BLOG</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to='/news/Others'>CONTACT</NavLink>
+                                <NavLink to='/contact'>CONTACT</NavLink>
                             </li>
                             {/* {user.email && */}
                             <li className="nav-item">
-                                <NavLink to='/profile'>ADMIN</NavLink>
+                                <NavLink to='/admin'>ADMIN</NavLink>
                             </li>
                             {/* } */}
                         </ul>
