@@ -1,0 +1,11 @@
+.contact_banner{
+    background-image: url('../../../images/contact_image.jpg')
+    ,
+      linear-gradient(rgba(22, 22, 22, 0.87), rgb(26, 24, 24));
+    height: 50vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+}
