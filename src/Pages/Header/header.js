@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
 import DehazeIcon from '@mui/icons-material/Dehaze';
-import logo from '../Media/img/logo.png'
+import logo from '../../Media/img/logo.png';
 // import useAuth from '../../../Hooks/useAuth';
 
 const Header = () => {
@@ -36,7 +36,7 @@ const Header = () => {
                                 <NavLink to='/blog'>BLOG</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to='/contact'>CONTACT</NavLink>
+                                <NavLink to='/contact_us'>CONTACT</NavLink>
                             </li>
                             {/* {user.email && */}
                             <li className="nav-item">
