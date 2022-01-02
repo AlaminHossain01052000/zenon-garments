@@ -1,0 +1,80 @@
+.underlined-hr{
+    width: 20%;
+    border: 2px solid green;
+}
+
+.contact-blog-single-icon i{
+    font-size: 34px;
+    color: white;
+    background-color: #1dd1a1;
+    padding: 30px 30px;
+}
+.contact-blog-single-icon-h1{
+    font-size: 24px;
+    text-align: left;
+    font-family: 'Mukta', sans-serif;
+    margin-left: 10px;
+}
+.contact-blog-single-icon-h4{
+    font-size: 16px;
+    text-align: left;
+    margin-left: 10px;
+    font-family: 'Rubik', sans-serif;
+
+}
+.contact-blog-social-icon{
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    
+    width:35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.contact-blog-social-icon:hover{
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    
+    width:32px;
+    height: 30px;
+    border-radius: 50%;
+}
+.contact-us-blog-form{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+}
+.contact-us-blog-form-field{
+    margin:40px 0;
+
+}
+
+.btn-contact-submit {background-image: linear-gradient(to right, #3CA55C 0%, #B5AC49  51%, #3CA55C  100%)}
+.btn-contact-submit {
+   margin: 10px 0px;
+   padding: 10px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+   border:0px;
+   font-family: 'Roboto', sans-serif;
+ }
+
+ .btn-contact-submit:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+ @media only screen and (max-width: 524px){
+    .contact-blog-title{
+        margin-top: 40px;
+    }
+}

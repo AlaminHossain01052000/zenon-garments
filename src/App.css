@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&family=Oswald&family=Poppins&family=Roboto&family=Rubik&family=Spline+Sans&family=Ubuntu&display=swap');
 .App {
   text-align: center;
+}
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .App-logo {
@@ -27,7 +32,12 @@
 .App-link {
   color: #61dafb;
 }
-
+.font-roboto{
+  font-family: 'Roboto', sans-serif;
+}
+.font-spline{
+   font-family: 'Spline Sans', sans-serif;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +45,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+.font-oswald{
+  font-family: 'Oswald', sans-serif;
+
+}
+.font-poppins{
+  font-family: 'Poppins', sans-serif;
+
+}
+.font-ubuntu{
+  font-family: 'Ubuntu', sans-serif;
+}
+.font-mukta{
+  font-family: 'Mukta', sans-serif;
+}
+.font-rubik{
+  font-family: 'Rubik', sans-serif;
+
 }
