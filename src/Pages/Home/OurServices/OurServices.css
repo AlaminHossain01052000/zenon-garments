@@ -1,8 +1,34 @@
+.ourServices{
+    padding: 5rem;
+}
 .ourServices .subTitle::before{
     content: '';
     position: absolute;
     height: 3px;
-    margin-top: 40px;
+    margin-top: 30px;
     width: 100px;
     background-color: aqua;
+}
+.ourServices .card{
+    display: block;
+    overflow: hidden;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .5s all;
+}
+.ourServices .card:hover{
+    color:#fff;
+}
+.ourServices .card .layer{
+    position:absolute;
+    top:calc(100% - 5px);
+    height:100%;
+    width:100%;
+    left:0;
+    background: #0B2B43;
+    transition:0.5s;
+    z-index: -1;
+}
+.ourServices .card:hover .layer{
+    top:0;
 }
