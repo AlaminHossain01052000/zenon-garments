@@ -1,0 +1,23 @@
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.header .navbar{
+    background-color: #fff;
+}
+.navbar-collapse a,.nav-item a{
+    text-decoration: none;
+    color: #0B2B43;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 8px 10px;
+}
+.nav-item a:hover{
+    color: aqua;
+}
+.userName{
+    color: #0B2B43;
+    margin-top: 11px;
+    font-size: 12px;
+}

@@ -1,0 +1,8 @@
+.ourServices .subTitle::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    margin-top: 40px;
+    width: 100px;
+    background-color: aqua;
+}

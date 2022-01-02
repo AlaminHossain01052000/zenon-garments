@@ -1,0 +1,32 @@
+.footer .subTitle::before{
+content: '';
+position: absolute;
+height: 3px;
+margin-top: 40px;
+width: 100px;
+background-color: aqua;
+}
+.footer .subTitle{
+    text-align: left;
+}
+.footer .list{
+    margin-top: 40px;
+    padding-left: 0;
+    list-style: none;
+    text-align: left;
+    line-height: 2.3rem;
+    font-weight: 500;
+}
+.footer .list li:hover{
+    cursor: pointer;
+    color: aqua;
+}
+.footer .socialIcon i{
+    font-size: 2rem;
+    margin: 4px 12px;
+    transition: .3s all;
+    cursor: pointer;
+}
+.footer .socialIcon i:hover{
+    transform:scale(1.1);
+}
