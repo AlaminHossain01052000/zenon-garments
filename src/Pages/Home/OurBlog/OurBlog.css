@@ -1,0 +1,19 @@
+.ourBlog{
+    padding: 4rem 0;
+}
+.titlePart{
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+.ourBlog .titlePart .subTitle::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    margin-top: 30px;
+    width: 67px;
+    background-color: aqua;
+}
+.ourBlog{
+    background-color: whitesmoke;
+}
