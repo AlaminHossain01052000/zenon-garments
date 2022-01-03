@@ -1,6 +1,6 @@
 import React from 'react';
 import useFirebase from './../Hooks/useFirebase';
-import { Link } from 'react-router-dom';
+
 const Header = () => {
     const { user, logOut } = useFirebase();
     return (
@@ -14,28 +14,14 @@ const Header = () => {
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <Link class="nav-link" aria-current="page" to="/home">Home</Link>
-                            </li>
-                            <li class="nav-item">
-                                <Link class="nav-link" aria-current="page" to="/contact_us">Contact Us</Link>
-                            </li>
-                            <li class="nav-item">
-                                <Link class="nav-link" aria-current="page" to="/all_career_info">Career</Link>
-                            </li>
-                            <li class="nav-item">
-                                <Link class="nav-link" aria-current="page" to="/about_us">About Us</Link>
-                            </li>
-                            <li class="nav-item">
-                                <Link class="nav-link" aria-current="page" to="/login">Login</Link>
+                                <a class="nav-link active" aria-current="page" href=" ">Home</a>
                             </li>
                         </ul>
                     </div>
                     {
                         user?.email ?
                             <button onClick={logOut}>Log Out</button> :
-                            <li class="nav-item">
-                                <Link class="nav-link" aria-current="page" to="/login">Login</Link>
-                            </li>
+                            <button>login</button>
                     }
                 </div>
             </nav>

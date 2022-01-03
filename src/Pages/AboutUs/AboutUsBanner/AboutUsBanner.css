@@ -1,0 +1,26 @@
+.aboutus_banner{
+    background-image: url('../../../images/about_banner.jpg')
+    ,
+      linear-gradient(rgba(36, 35, 35, 0.87), rgb(54, 52, 52));
+    height: 50vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+}
+
+.about{
+  width: 30%;
+  padding: 30px;
+  border-radius: 3px;
+  background-color: rgb(86, 243, 243);
+  position: relative;
+  bottom: 45px;
+  left: 35%;
+}
+
+.about h1{
+  color: #fff;
+  font-weight: bolder;
+}

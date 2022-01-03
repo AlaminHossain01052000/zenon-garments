@@ -1,0 +1,24 @@
+.aboutus_banner{
+    background-image: url('../../images/about_banner.jpg')
+    ,
+      linear-gradient(rgba(36, 35, 35, 0.87), rgb(54, 52, 52));
+    height: 50vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+}
+
+
+.image-style{
+    height: 600px;
+}
+
+.about-details{
+    text-align: left;
+}
+
+.fas{
+   color: limegreen;
+}
