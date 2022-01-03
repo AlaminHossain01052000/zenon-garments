@@ -9,3 +9,21 @@
     background-blend-mode: overlay;
     background-repeat: no-repeat;
 }
+
+
+.contact-info{
+  position: relative;
+  bottom: 100%;
+  color: white;
+}
+
+.button-style{
+  background-color: aqua;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.fas{
+  color: aqua;
+}
