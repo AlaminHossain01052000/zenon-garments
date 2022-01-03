@@ -12,12 +12,11 @@ const Footer = () => {
                         <img style={{ width: "180px", cursor: 'pointer' }} src={`${logo}`} alt="logo" />
                         <p style={{ padding: '35px 0' }}>Lorem ipsum dolor sit amet, consectet adipiscing elit, sed do eiusmod</p>
                         <div className="socialIcon">
-                            <i class="fab fa-facebook"></i>
-                            <i class="fab fa-twitter-square"></i>
-                            <i class="fab fa-youtube"></i>
-                            <i class="fab fa-instagram-square"></i>
-                        </div>
-                    </Col>
+                            <i className="fab fa-facebook"></i>
+                            <i className="fab fa-twitter-square"></i>
+                            <i className="fab fa-youtube"></i>
+                            <i className="fab fa-instagram-square"></i>
+                        </div></Col>
 
                     <Col xs={5} md={2}>
                         <h4 className='subTitle'>Quick Links</h4>
@@ -42,9 +41,9 @@ const Footer = () => {
                     <Col xs={11} md={4}>
                         <h4 className='subTitle'>Make Appointment</h4>
                         <ul className='list'>
-                            <li><i class="far fa-clock" style={{ marginRight: '8px' }}></i>9AM - 5PM , Monday - Saturday</li>
-                            <li><i class="fas fa-phone-volume" style={{ marginRight: '8px' }}></i>+88023344XXXXX</li>
-                            <li><i class="far fa-envelope" style={{ marginRight: '8px' }}></i>example@gmail.com</li>
+                            <li><i className="far fa-clock" style={{ marginRight: '8px' }}></i>9AM - 5PM , Monday - Saturday</li>
+                            <li><i className="fas fa-phone-volume" style={{ marginRight: '8px' }}></i>+88023344XXXXX</li>
+                            <li><i className="far fa-envelope" style={{ marginRight: '8px' }}></i>example@gmail.com</li>
                         </ul>
                     </Col>
                 </Row>
