@@ -38,7 +38,7 @@ const Register = () => {
 
 
     return (
-        <div className='mt-5'>
+        <div className='mt-5 w-75 mx-auto'>
             <Link to="/home">
                 <i title="Home" class="fas fa-arrow-left bg-red fs-5 text-success mb-5"></i>
 
