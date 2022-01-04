@@ -56,8 +56,11 @@ const Login = () => {
                 </div>
                 <button type="submit" class="btn-contact-submit mx-auto">Login</button>
             </form>
-            <button type="submit" onClick={handleGoogleSignUp} className="btn btn-warning text-white runded px-5  py-2 mt-5">Login With Google</button>
-            <p className='mt-3 text-danger fw-bold fs-5'>Don't Have An Account? Click <Link to="/register">Here</Link> To Register Now</p>
+            <div className='d-flex justify-content-center align-items-center'>
+                <button type="submit" onClick={handleGoogleSignUp} className="btn btn-warning text-white runded px-5  py-2 mt-5 mx-auto">Login With Google</button>
+            </div>
+
+            <p className='mt-3 text-danger fw-bold fs-5 text-center'>Don't Have An Account? Click <Link to="/register">Here</Link> To Register Now</p>
         </div>
     );
 };

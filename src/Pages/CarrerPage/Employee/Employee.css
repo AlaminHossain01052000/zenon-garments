@@ -1,3 +1,8 @@
 .employee-card:hover{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+.employee-card{
+    padding: 10px;
+cursor: pointer;
+transition: 0.6s;
+}

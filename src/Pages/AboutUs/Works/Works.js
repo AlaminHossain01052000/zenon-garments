@@ -12,8 +12,8 @@ const Works = () => {
                 {/* <Fade right big>
                     <p>Our Process</p>
                 </Fade> */}
-                <h1>How We Works</h1>
-                <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt <br /> ut labore et dolore magna aliqua</h6>
+                <h1 className='text-center'>How We Works</h1>
+                <h6 className='text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt <br /> ut labore et dolore magna aliqua</h6>
             </div>
 
             <div className="container my-5">

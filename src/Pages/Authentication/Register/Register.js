@@ -80,8 +80,11 @@ const Register = () => {
                 </div>
                 <button type="submit" class="btn-contact-submit mx-auto">Register</button>
             </form>
-            <button type="submit" onClick={handleGoogleSignUp} className="btn btn-warning runded px-5  py-2 mt-5">Login With Google</button>
-            <p className='mt-3 text-danger fw-bold fs-5'>Already Registerd? Click <Link to="/login">Here</Link> to Login</p>
+            <div className='d-flex justify-content-center align-items-center'>
+                <button type="submit" onClick={handleGoogleSignUp} className="btn btn-warning runded px-5  py-2 mt-5">Login With Google</button>
+            </div>
+
+            <p className='mt-3 text-danger fw-bold fs-5 text-center'>Already Registerd? Click <Link to="/login">Here</Link> to Login</p>
 
         </div >
     );

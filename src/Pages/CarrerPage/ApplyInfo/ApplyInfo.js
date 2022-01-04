@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import './ApplyInfo.css';
 const ApplyInfo = () => {
@@ -37,7 +37,7 @@ const ApplyInfo = () => {
     return (
         <div>
 
-            <h3 className='mt-4 text-success'>Apply Form</h3>
+            <h3 className='mt-4 text-success text-center'>Apply Form</h3>
             <hr width="20%" className="mx-auto" />
             <form onSubmit={handleApply} accept-charset="UTF-8" className="w-50 mx-auto text-start apply-form" enctype="multipart/form-data" target="_blank">
                 <div class="form-group">

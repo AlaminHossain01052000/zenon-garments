@@ -13,7 +13,6 @@ const MyApplication = () => {
     }, [user])
 
 
-    console.log(application)
 
     return (
 
@@ -39,7 +38,7 @@ const MyApplication = () => {
                 </tbody>
             </table>
             : <div>
-                <h4 className='mt-5 text-danger'>No application available. Apply
+                <h4 className='mt-5 text-danger text-center'>No application available. Apply
                     <Link className="ms-2" style={{ color: "blue", cursor: "pointer", textDecoration: "none" }} to="/apply">Now</Link>
                 </h4>
             </div>

@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import useAuth from '../../Hooks/useAuth';
-import ApplyInfo from '../ApplyInfo/ApplyInfo';
+
 import Employee from '../Employee/Employee';
 import './AllCarrerInfo.css';
 const AllCarrerInfo = () => {
     const [employees, setEmployees] = useState([]);
-    const { admin } = useAuth();
+
     const navigate = useNavigate();
     useEffect(() => {
         fetch("http://localhost:5000/employees")
@@ -27,7 +26,7 @@ const AllCarrerInfo = () => {
             <Container>
 
                 <button onClick={handleGoToApply} className='btn-apply'>Apply Now</button>
-                <h1 className='font-poppins text-success my-4'>Our Employees</h1>
+                <h1 className='font-poppins text-success my-4 text-center'>Our Employees</h1>
                 <Row>
                     {
 

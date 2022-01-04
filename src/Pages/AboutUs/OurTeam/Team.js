@@ -11,8 +11,8 @@ const Team = () => {
             {/* <Fade right big>
                 <p>Our Team</p>
             </Fade> */}
-            <h1>Meet With Professional Team</h1>
-            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio debitis maxime quasi facilis ut molestiae <br /> harum laboriosam error excepturi fugit.</h6>
+            <h1 className='text-center'>Meet With Professional Team</h1>
+            <h6 className='text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio debitis maxime quasi facilis ut molestiae <br /> harum laboriosam error excepturi fugit.</h6>
             <div className="container my-5 ">
                 <div className="row row-cols-1 row-cols-md-3 g-5 img-fluid">
                     <div className="col team">
