@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../Hooks/useFirebase';
+import useAuth from '../../Hooks/useAuth';
 
 const MyApplication = () => {
     const [application, setApplication] = useState({})
-    const { user } = useFirebase();
+    const { user } = useAuth();
     console.log(user.email)
     useEffect(() => {
         fetch(`http://localhost:5000/applicants/${user.email}`)

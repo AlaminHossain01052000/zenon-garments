@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import useFirebase from '../../Hooks/useFirebase';
+import useAuth from '../../Hooks/useAuth';
 import ApplyInfo from '../ApplyInfo/ApplyInfo';
 import Employee from '../Employee/Employee';
 import './AllCarrerInfo.css';
 const AllCarrerInfo = () => {
     const [employees, setEmployees] = useState([]);
-    const { admin } = useFirebase();
+    const { admin } = useAuth();
     const navigate = useNavigate();
     useEffect(() => {
         fetch("http://localhost:5000/employees")

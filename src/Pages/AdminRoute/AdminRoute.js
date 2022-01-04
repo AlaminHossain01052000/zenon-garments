@@ -1,10 +1,10 @@
 import React from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
-import useFirebase from '../Hooks/useFirebase';
+import useAuth from '../Hooks/useAuth';
 const AdminRoute = ({ children, ...rest }) => {
-    const { user, admin } = useFirebase();
+    const { admin } = useAuth();
 
-    console.log(admin);
+
 
     const location = useLocation();
     if (admin) {

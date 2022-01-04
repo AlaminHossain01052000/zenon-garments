@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
-import useFirebase from '../../Hooks/useFirebase';
+import useAuth from '../../Hooks/useAuth';
 import './ApplyInfo.css';
 const ApplyInfo = () => {
     const [applicantInfo, setApplicantInfo] = useState({});
-    const { user } = useFirebase();
+    const { user } = useAuth();
     const navigate = useNavigate();
     const handleOnChange = e => {
         const value = e.target.value;

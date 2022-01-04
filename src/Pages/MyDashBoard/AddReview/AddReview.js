@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import useFirebase from '../../Hooks/useFirebase';
+import useAuth from '../../Hooks/useAuth';
 import './AddReview.css';
 const AddReview = () => {
     const [review, setReview] = useState({});
 
-    const { user } = useFirebase();
+    const { user } = useAuth();
     const handleOnChange = e => {
         const field = e.target.name;
         const value = e.target.value;

@@ -1,9 +1,9 @@
 import React from 'react';
-import useFirebase from './../Hooks/useFirebase';
+import useAuth from './../Hooks/useAuth';
 import { Link } from 'react-router-dom';
 import './Header.css';
 const Header = () => {
-    const { user, logOut, admin } = useFirebase();
+    const { user, logOut, admin } = useAuth();
     console.log(admin)
     return (
         <div className='header'>

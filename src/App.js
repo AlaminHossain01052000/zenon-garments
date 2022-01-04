@@ -19,11 +19,13 @@ import DashboardMenu from './Pages/MyDashBoard/DashboardMenu/DashboardMenu';
 import AllApplicants from './Pages/Admin/AdminMain/AllApplicants/AllApplicants';
 import ApplyInfo from './Pages/CarrerPage/ApplyInfo/ApplyInfo';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import SuccessfullyApplied from './Pages/CarrerPage/ApplyInfo/SuccessfullyApplied';
+import AuthProvider from './Pages/Context/AuthProvider';
 
 function App() {
   return (
-    <div className="App">
+    <AuthProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -39,20 +41,27 @@ function App() {
 
             <AdminMaster></AdminMaster>
 
+
+
           } >
             <Route path="/admin/makeAdmin" element={
 
               <MakeAdmin></MakeAdmin>
+
+
 
             } />
             <Route path="/admin/allApplicant" element={
 
               <AllApplicants></AllApplicants>
 
+
+
             } />
             <Route path="/admin/manageAllOrders" element={
 
               <ManageAllOrders></ManageAllOrders>
+
 
 
 
@@ -63,11 +72,15 @@ function App() {
 
 
 
+
+
             } />
           </Route>
           <Route path="/dashboard" element={
 
             <DashboardMenu></DashboardMenu>
+
+
 
           } >
 
@@ -75,10 +88,13 @@ function App() {
 
               <MyApplication></MyApplication>
 
+
             } />
             <Route path="/dashboard/myOrders" element={
 
               <MyOrders></MyOrders>
+
+
 
 
 
@@ -88,13 +104,15 @@ function App() {
               <AddReview></AddReview>
 
 
+
+
             } />
           </Route>
         </Routes>
       </BrowserRouter>
 
 
-    </div >
+    </AuthProvider>
   );
 }
 

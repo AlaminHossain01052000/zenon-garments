@@ -7,7 +7,7 @@ import initialiazeAuthentication from './../Authentication/Firebase/Firebase.ini
 initialiazeAuthentication();
 
 
-const useFirebase = () => {
+const useAuth = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState('')
     const [isLoading, setIsLoading] = useState(true);
@@ -153,4 +153,4 @@ const useFirebase = () => {
 }
 
 
-export default useFirebase;
+export default useAuth;
