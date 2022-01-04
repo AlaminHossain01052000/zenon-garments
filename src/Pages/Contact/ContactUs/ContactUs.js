@@ -1,6 +1,5 @@
 import React from 'react';
-import Footer from '../../Footer/Footer';
-import Header from '../../Header/Header';
+import Header from '../../Header/header';
 import ContactFooter from '../ContactFooter/ContactFooter';
 import ContactUsBanner from '../ContactUsBanner/ContactUsBanner';
 import ContactUsBlog from '../ContactUsBlog/ContactUsBlog';
