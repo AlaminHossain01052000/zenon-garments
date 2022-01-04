@@ -1,0 +1,216 @@
+.main-container{
+    /* background-image: url('https://cdn3.vectorstock.com/i/1000x1000/98/82/background-clothes-vector-1029882.jpg') ;
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+    width: 1366px;
+    background-repeat: no-repeat;
+    opacity: .3; */
+    
+}
+.service-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.banner-image{
+    width: 1348px;
+    /* opacity: 0.5; */
+}
+
+.service-button{
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 220px;
+    margin-top: -24px;
+    background-color: cornflowerblue;
+    border: 3px solid white;
+    border-radius: 2px;
+    font-size: 20px;
+}
+
+.service-button:hover{
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 220px;
+    margin-top: -24px;
+    background-color: rgba(51, 49, 49, 0.479);
+    border: 3px solid white;
+    border-radius: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+.custom-service{
+    background-image: url('https://stcyblogs.files.wordpress.com/2020/05/gd_banner.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+    width: 1347px; 
+    height: 400px;
+    background-repeat: no-repeat;
+    margin-top: 80px;
+    /* position:fixed */
+}
+.custom-service h4{
+    font-size: 40px;
+    color: white;
+    margin-top: 140px;
+    margin-left: 350px;
+    position: absolute;
+}
+.custom-service p{
+    font-size: 20px;
+    color: white;
+    margin-top: 200px;
+    margin-left: 500px;
+    position: absolute;
+}
+
+.our-info{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap:30px;
+    display: flex;
+    justify-content: center;
+    margin-top: -60px;
+    background-color: white;
+    width: 500px;
+    margin-left: 450px;
+    margin-bottom: 40px;
+    border-radius: 3px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.082);
+}
+
+
+.fabric-printing p{
+    text-align: start;
+    margin-left: 30px;
+    margin-top: -13px;
+}
+.fabric-printing img{
+    width: 300px;
+    height: 300px;
+}
+.fabric-printing{
+    width: 400px;
+}
+.fabric-printing button{
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+    padding: 7px;
+    width: 80px;
+    background-color: rgb(124, 175, 235);
+    border-radius: 4px;
+    border: 1px solid white;
+}
+.fabric-printing button:hover{
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+    padding: 7px;
+    width: 80px;
+    background-color: rgb(243, 245, 247);
+    border-radius: 4px;
+    border: 1px solid rgb(8, 8, 8);
+    color: rgb(0, 0, 255);
+}
+.fabric-printing h4{
+    margin-top: -20px;
+}
+
+/* .deying-fabric  */
+
+.deying-fabric p{
+    text-align: start;
+    margin-left: 30px;
+    margin-top: -13px;
+}
+.deying-fabric img{
+    width: 300px;
+    height: 250px;
+}
+.deying-fabric{
+    width: 400px;
+}
+.deying-fabric button{
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+    padding: 7px;
+    width: 80px;
+    background-color: rgb(124, 175, 235);
+    border-radius: 4px;
+    border: 1px solid white;
+}
+
+.deying-fabric button:hover{
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+    padding: 7px;
+    width: 80px;
+    background-color: rgb(243, 245, 247);
+    border-radius: 4px;
+    border: 1px solid rgb(8, 8, 8);
+    color: rgb(0, 0, 255);
+}
+
+.deying-fabric h4{
+}
+
+/* sweter  */
+
+.sweater p{
+    text-align: start;
+    margin-left: 30px;
+    margin-top: -13px;
+}
+.sweater img{
+    width: 250px;
+    height: 240px;
+}
+.sweater{
+    width: 400px;
+}
+.sweater button{
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+    padding: 7px;
+    width: 80px;
+    background-color: rgb(124, 175, 235);
+    border-radius: 4px;
+    border: 1px solid white;
+}
+
+.sweater button:hover{
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+    padding: 7px;
+    width: 80px;
+    background-color: rgb(243, 245, 247);
+    border-radius: 4px;
+    border: 1px solid rgb(8, 8, 8);
+    color: rgb(0, 0, 255);
+}
+
+.sweater h4{
+}
+
+@media only screen and (max-width: 600px)  {
+    .service-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media only screen and (max-width: 600px)  {
+    .our-info{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 50px;
+    }
+}

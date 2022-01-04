@@ -24,11 +24,16 @@ const AddReview = () => {
                 "content-type": "application/json"
             },
             body: JSON.stringify(review)
-        }).then()
+        }).then(res => res.json())
+            .then(data => {
+                if (data) {
+                    alert("Review Added Done !");
+                }
+            })
 
     }
     return (
-        <div>
+        <div className='d-flex justify-content-center align-items-center flex-column'>
             <img src="https://i.ibb.co/mqfxtpC/download-2-removebg-preview.png" alt="" />
             <form onSubmit={handleAddingReview} className="add-review-form">
                 <input type="text" defaultValue={user.displayName} disabled style={{ color: "blue", backgroundColor: "rgba(0,0,0,0.5)" }} />

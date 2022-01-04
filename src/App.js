@@ -22,7 +22,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import SuccessfullyApplied from './Pages/CarrerPage/ApplyInfo/SuccessfullyApplied';
 import AuthProvider from './Pages/Context/AuthProvider';
-
+import Service from './Pages/Service/Service';
+import Pricing from './Pages/Pricing/Pricing';
+import Purchase from './Pages/Purchase/Purchase';
 function App() {
   return (
     <AuthProvider>
@@ -37,6 +39,9 @@ function App() {
           <Route path="/register" element={<Register></Register>} />
           <Route path="/login" element={<Login></Login>} />
           <Route path="/submittedSuccess" element={<SuccessfullyApplied></SuccessfullyApplied>} />
+          <Route path="/service" element={<Service></Service>} />
+          <Route path="/pricing" element={<Pricing></Pricing>} />
+          <Route path="/purchase/:id" element={<Purchase></Purchase>} />
           <Route path="/admin" element={
 
             <AdminMaster></AdminMaster>

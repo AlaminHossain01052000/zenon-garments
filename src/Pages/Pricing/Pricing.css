@@ -1,0 +1,117 @@
+.pricing-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 80px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.pricing-container h2{
+    color: cornflowerblue;
+}
+
+/* basic */
+.basic-plan-container{
+    padding: 20px;
+    width: 300px;
+    box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.075);
+    
+}
+.basic-plan-container:hover{
+    background-color: rgba(2, 2, 48, 0.829);
+    color: white;
+}
+.basic-plan-container p{
+    text-align: start;
+    margin-left: 105px;
+}
+.basic-plan-container button{
+    width: 120px;
+    padding: 10px;
+    margin-left: 24px;
+    background-color: cornflowerblue;
+    border: 1px solid white;
+    border-radius: 2px;
+    margin-bottom: 19px;
+}
+.basic-plan-container button:hover{
+    background-color: white;
+    color: cornflowerblue ;
+    border: 1px solid cornflowerblue;
+    cursor: pointer;
+}
+
+/* premium  */
+.premium-plan-container{
+    padding: 20px;
+    width: 300px;
+    box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.075);
+}
+.premium-plan-container:hover{
+    background-color: rgba(2, 2, 48, 0.829);
+    color: white;
+}
+.premium-plan-container p{
+    text-align: start;
+    margin-left: 105px;
+}
+.premium-plan-container h4{
+    margin-left: 25px;
+}
+.premium-plan-container button{
+    width: 120px;
+    padding: 10px;
+    margin-left: 24px;
+    background-color: cornflowerblue;
+    border: 1px solid white;
+    border-radius: 2px;
+    margin-bottom: 19px;
+}
+.premium-plan-container button:hover{
+    background-color: white;
+    color: cornflowerblue ;
+    border: 1px solid cornflowerblue;
+    cursor: pointer;
+}
+
+/* deluxe  */
+.deluxe-plan-container{
+    padding: 20px;
+    width: 300px;
+    box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.075);
+   
+}
+.deluxe-plan-container:hover{
+    background-color: rgba(2, 2, 48, 0.829);
+    color: white;
+}
+.deluxe-plan-container p{
+    text-align: start;
+    margin-left: 105px;
+}
+.deluxe-plan-container h4{
+    margin-left: 20px;
+}
+
+.deluxe-plan-container button{
+    width: 120px;
+    padding: 10px;
+    margin-left: 24px;
+    background-color: cornflowerblue;
+    border: 1px solid white;
+    border-radius: 2px;
+    margin-bottom: 19px;
+}
+.deluxe-plan-container button:hover{
+    background-color: white;
+    color: cornflowerblue ;
+    border: 1px solid cornflowerblue;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px)  {
+    .pricing-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
