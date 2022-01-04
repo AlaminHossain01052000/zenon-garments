@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import useFirebase from './../../Hooks/useFirebase';
 
 const Register = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
     const [logninData, setLoginData] = useState({})
     const { user, googleSignIn, handleCreteNewUser } = useFirebase();
 
@@ -16,16 +19,20 @@ const Register = () => {
         setLoginData(newLoginData);
     }
 
-    const handleOnsubmit = () => {
+    const handleOnsubmit = (e) => {
+        e.preventDefault();
         if (logninData?.password !== logninData?.password2) {
             alert('your password did not match')
         }
-        handleCreteNewUser(logninData.email, logninData.password, logninData?.name)
+        else {
+            handleCreteNewUser(logninData.email, logninData.password, logninData?.name, navigate, location)
+        }
+
     }
 
 
     const handleGoogleSignUp = () => {
-        googleSignIn();
+        googleSignIn(navigate, location);
 
     }
 

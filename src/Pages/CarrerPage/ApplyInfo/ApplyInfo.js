@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { FormControl, InputGroup } from 'react-bootstrap';
+import useFirebase from '../../Hooks/useFirebase';
 
 const ApplyInfo = () => {
     const [applicantInfo, setApplicantInfo] = useState({});
+    const { user } = useFirebase();
     const handleOnChange = e => {
         const value = e.target.value;
         const field = e.target.name;
@@ -10,20 +11,31 @@ const ApplyInfo = () => {
         newApplicantInfo[field] = value;
         setApplicantInfo(newApplicantInfo);
     }
+
     const handleApply = e => {
         e.preventDefault();
         console.log(applicantInfo);
+        applicantInfo.status = "waiting";
+        applicantInfo.name = user.displayName;
+        applicantInfo.email = user.email;
+        fetch("http://localhost:5000/applicants", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(applicantInfo)
+        }).then()
     }
     return (
         <div>
             <form onSubmit={handleApply} accept-charset="UTF-8" className="w-50 mx-auto text-start" enctype="multipart/form-data" target="_blank">
                 <div class="form-group">
                     <label for="exampleInputName">Full Name</label>
-                    <input onChange={handleOnChange} type="text" name="fullname" class="form-control mb-4 mb-4" id="exampleInputName" placeholder="Enter your Name " required={true} />
+                    <input onChange={handleOnChange} type="text" name="fullname" class="form-control mb-4 mb-4" id="exampleInputName" value={user.displayName} disabled />
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1" required={true}>Email address</label>
-                    <input onChange={handleOnChange} type="email" name="email" class="form-control mb-4" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address" />
+                    <input onChange={handleOnChange} type="email" name="email" class="form-control mb-4" id="exampleInputEmail1" aria-describedby="emailHelp" value={user.email} disabled />
                 </div>
                 <div class="form-group">
                     <label for="input onChange={handleOnChange}Address">Address</label>

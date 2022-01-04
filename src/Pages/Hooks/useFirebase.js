@@ -10,40 +10,64 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState('')
     const [isLoading, setIsLoading] = useState(true);
-
+    const [admin, setAdmin] = useState(false);
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
 
-    const googleSignIn = () => {
+    const googleSignIn = (navigate, location) => {
         setIsLoading(true);
 
         return signInWithPopup(auth, googleProvider)
             .then(result => {
-                const user = result.user;
-                console.log(user);
-                setUser(user);
+                setError("");
+
+                const newUser = { displayName: result.user.displayName, email: result.user.email };
+
+                fetch("http://localhost:5000/users", {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(newUser)
+                })
+                    .then()
+                const redirectUri = location?.state?.from || "/home";
+                navigate(redirectUri);
             })
             .finally(() => setIsLoading(false))
     }
 
     //Create New User Using Eamil and Password
-    const handleCreteNewUser = (email, password, name, history) => {
+    const handleCreteNewUser = (email, password, name, navigate, location) => {
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setError('')
-                const user = { email, displayName: name }
-                setUser(user);
-                //save user to the database
-                saveUser(email, name, "POST");
-                //send namae to fireabase after creation
+                const newUser = { displayName: name, email: email };
+                setUser(newUser);
                 updateProfile(auth.currentUser, {
                     displayName: name
-                }).then(() => { })
-                    .catch((error) => { });
+                }).then(() => {
+                    // Set User Display Name
+
+                }).catch((error) => {
+                    // An error occurred At the time of setting user displayName
+
+                });
+
+                fetch("http://localhost:5000/users", {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(newUser)
+                })
+                    .then()
+                setIsLoading(false)
                 //redirecting
-                history.replace('/')
+                const redirectUri = location?.state?.from || "/home";
+                navigate(redirectUri);
 
             })
             .catch(error => {
@@ -85,18 +109,26 @@ const useFirebase = () => {
 
 
 
-    const saveUser = (email, displayName, method) => {
-        const user = { email, displayName };
-        fetch('https://aqueous-reef-70969.herokuapp.com/users', {
-            method: method,
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(user)
-        })
-            .then()
-    }
+    // const saveUser = (email, displayName, method) => {
+    //     const user = { email, displayName };
+    //     fetch('https://aqueous-reef-70969.herokuapp.com/users', {
+    //         method: method,
+    //         headers: {
+    //             'content-type': 'application/json'
+    //         },
+    //         body: JSON.stringify(user)
+    //     })
+    //         .then()
+    // }
+    useEffect(() => {
 
+        fetch(`http://localhost:5000/users/admin?email=${user.email}`)
+            .then(res => res.json())
+            .then(data => {
+                setAdmin(data.admin)
+
+            })
+    }, [user.email])
     const logOut = () => {
         setIsLoading(true);
         signOut(auth)
@@ -109,6 +141,7 @@ const useFirebase = () => {
         user,
         isLoading,
         error,
+        admin,
         googleSignIn,
         handleCreteNewUser,
         handleOldLogin,
