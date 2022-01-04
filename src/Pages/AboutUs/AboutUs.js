@@ -6,10 +6,12 @@ import AboutTextilery from './AboutTextilery/AboutTextilery';
 import Works from './Works/Works';
 import Team from './OurTeam/Team';
 import ContactBanner from './ContactBanner/ContactBanner';
+import Header from '../Header/header';
 
 const AboutUs = () => {
     return (
         <div>
+            <Header></Header>
             <AboutUsBanner></AboutUsBanner>
             <AboutTextilery></AboutTextilery>
             <Works></Works>

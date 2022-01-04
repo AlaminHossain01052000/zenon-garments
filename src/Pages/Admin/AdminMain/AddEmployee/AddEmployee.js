@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './AddEmployee.css';
 const AddEmployee = () => {
     const [newEmployee, setNewEmployee] = useState({});
     const [address, setAddress] = useState("");
@@ -14,9 +14,7 @@ const AddEmployee = () => {
     const handleAddressSetting = e => {
         setAddress(e.target.value);
     }
-    const handlePhoneSetting = e => {
-        setTel(e.target.value);
-    }
+
     const handleEmployeeAdding = e => {
         e.preventDefault();
         // newEmployee.address.city = address;
@@ -31,7 +29,10 @@ const AddEmployee = () => {
     }
     return (
         <div>
-            <form onSubmit={handleEmployeeAdding} accept-charset="UTF-8" className="w-50 mx-auto text-start" enctype="multipart/form-data" target="_blank">
+
+            <h1 className='font-poppins text-success mt-5'>Add A Employee</h1>
+            <form onSubmit={handleEmployeeAdding} accept-charset="UTF-8" className="w-50 mx-auto text-start employee-adding-form" enctype="multipart/form-data" target="_blank">
+
                 <div class="form-group">
                     <label for="exampleInputName">Full Name</label>
                     <input onChange={handleOnChange} type="text" name="name" class="form-control mb-4 mb-4" id="exampleInputName" placeholder="Enter your Name " required={true} />

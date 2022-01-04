@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useFirebase from './../../Hooks/useFirebase';
 
 const Register = () => {
@@ -39,6 +39,10 @@ const Register = () => {
 
     return (
         <div className='mt-5'>
+            <Link to="/home">
+                <i title="Home" class="fas fa-arrow-left bg-red fs-5 text-success mb-5"></i>
+
+            </Link>
             <form onSubmit={handleOnsubmit}>
                 <div className='w-50 mx-auto'>
                     <div class="mb-3">
@@ -74,11 +78,11 @@ const Register = () => {
                         />
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Register</button>
+                <button type="submit" class="btn-contact-submit mx-auto">Register</button>
             </form>
             <button type="submit" onClick={handleGoogleSignUp} className="btn btn-warning runded px-5  py-2 mt-5">Login With Google</button>
+            <p className='mt-3 text-danger fw-bold fs-5'>Already Registerd? Click <Link to="/login">Here</Link> to Login</p>
 
-            {user?.email && <h4>Register Successfully done</h4>}
         </div >
     );
 };

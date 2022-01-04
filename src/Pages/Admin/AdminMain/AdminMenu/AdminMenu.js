@@ -1,13 +1,13 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, Outlet } from 'react-router-dom';
-
+import './AdminMenu.css';
 const AdminMenu = () => {
     return (
-        <div>
-            <Navbar bg="light" expand="lg">
+        <div id="admin">
+            <Navbar className="admin-navbar" expand="lg">
                 <Container>
-                    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                    <h1 className='logo-font me-3'>Zenon</h1>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">

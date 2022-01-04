@@ -3,6 +3,7 @@ import useFirebase from '../../Hooks/useFirebase';
 import './AddReview.css';
 const AddReview = () => {
     const [review, setReview] = useState({});
+
     const { user } = useFirebase();
     const handleOnChange = e => {
         const field = e.target.name;
@@ -11,10 +12,12 @@ const AddReview = () => {
         newReview[field] = value;
         setReview(newReview);
     }
+
     const handleAddingReview = e => {
         e.preventDefault();
         review.displayName = user.displayName;
         review.email = user.email;
+        console.log(review);
         fetch("http://localhost:5000/reviews", {
             method: "POST",
             headers: {

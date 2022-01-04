@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useFirebase from './../../Hooks/useFirebase';
 
 const Login = () => {
-
+    const navigate = useNavigate();
+    const location = useLocation();
     const { googleSignIn, handleOldLogin } = useFirebase();
 
     const [logninData, setLoginData] = useState({})
@@ -16,22 +18,26 @@ const Login = () => {
     }
 
     const handleOnsubmit = e => {
-        handleOldLogin(logninData?.email, logninData?.password)
+        handleOldLogin(logninData?.email, logninData?.password, navigate, location)
 
         e.preventDefault();
     }
 
     const handleGoogleSignUp = () => {
-        googleSignIn();
+        googleSignIn(navigate, location);
     }
 
 
     return (
         <div className='mt-5'>
+            <Link to="/home">
+                <i title="Home" class="fas fa-arrow-left bg-red fs-5 text-success mb-5"></i>
+
+            </Link>
             <form onSubmit={handleOnsubmit}>
                 <div className='w-50 mx-auto'>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <label for="exampleInputEmail1" class="form-label mb-3">Email address</label>
                         <input type="email"
                             onBlur={handleLogin}
                             class="form-control"
@@ -39,7 +45,7 @@ const Login = () => {
                         />
                     </div>
                     <div class="mb-3">
-                        <label for="password1" class="form-label">Password</label>
+                        <label for="password1" class="form-label mb-3">Password</label>
                         <input type="password"
                             onBlur={handleLogin}
                             class="form-control"
@@ -48,9 +54,10 @@ const Login = () => {
                     </div>
 
                 </div>
-                <button type="submit" class="btn btn-primary">Login</button>
+                <button type="submit" class="btn-contact-submit mx-auto">Login</button>
             </form>
-            <button type="submit" onClick={handleGoogleSignUp} className="btn btn-warning runded px-5  py-2 mt-5">Login With Google</button>
+            <button type="submit" onClick={handleGoogleSignUp} className="btn btn-warning text-white runded px-5  py-2 mt-5">Login With Google</button>
+            <p className='mt-3 text-danger fw-bold fs-5'>Don't Have An Account? Click <Link to="/register">Here</Link> To Register Now</p>
         </div>
     );
 };

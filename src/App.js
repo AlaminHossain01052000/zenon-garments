@@ -1,9 +1,6 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
 import ContactUs from './Pages/Contact/ContactUs/ContactUs';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import Home from './Pages/Home/Home/Home';
 import AllCarrerInfo from './Pages/CarrerPage/AllCarrerInfo/AllCarrerInfo';
 import AboutUs from './Pages/AboutUs/AboutUs';
@@ -21,6 +18,9 @@ import Dashboard from './Pages/MyDashBoard/Dashboard/Dashboard';
 import DashboardMenu from './Pages/MyDashBoard/DashboardMenu/DashboardMenu';
 import AllApplicants from './Pages/Admin/AdminMain/AllApplicants/AllApplicants';
 import ApplyInfo from './Pages/CarrerPage/ApplyInfo/ApplyInfo';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import SuccessfullyApplied from './Pages/CarrerPage/ApplyInfo/SuccessfullyApplied';
+
 function App() {
   return (
     <div className="App">
@@ -34,6 +34,7 @@ function App() {
           <Route path="/about_us" element={<AboutUs></AboutUs>} />
           <Route path="/register" element={<Register></Register>} />
           <Route path="/login" element={<Login></Login>} />
+          <Route path="/submittedSuccess" element={<SuccessfullyApplied></SuccessfullyApplied>} />
           <Route path="/admin" element={
 
             <AdminMaster></AdminMaster>

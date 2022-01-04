@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { Container, Row } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import useFirebase from '../../Hooks/useFirebase';
 import ApplyInfo from '../ApplyInfo/ApplyInfo';
+import Employee from '../Employee/Employee';
 import './AllCarrerInfo.css';
 const AllCarrerInfo = () => {
     const [employees, setEmployees] = useState([]);
@@ -18,32 +20,26 @@ const AllCarrerInfo = () => {
     }
     return (
         <div>
-            <button onClick={handleGoToApply} className='btn btn-primary'>Apply Now</button>
-            <h1>Our Employees</h1>
-            {
+            <Link to="/home">
+                <i title="Home" class="fas fa-arrow-left bg-red fs-5 text-success my-1"></i>
 
-                employees.map(employee =>
-                    <>
+            </Link>
+            <Container>
 
-                        <div className='border my-3'>
-                            <li>id:-{employee.factoyId}</li>
-                            <li>name:-{employee.name}</li>
-                            <li>email:-{employee.email}</li>
-                            <li>position:-{employee.position}</li>
-                            <li>Address:-{employee.address.city}</li>
-                            <li>Phone:-{employee.phone}</li>
-                        </div>
+                <button onClick={handleGoToApply} className='btn-apply'>Apply Now</button>
+                <h1 className='font-poppins text-success my-4'>Our Employees</h1>
+                <Row>
+                    {
+
+                        employees.map(employee => <Employee employee={employee}></Employee>
 
 
+                        )
+                    }
+                </Row>
 
-
-                    </>
-
-
-                )
-            }
-            {/* else show this */}
-
+                {/* else show this */}
+            </Container>
         </div>
 
 

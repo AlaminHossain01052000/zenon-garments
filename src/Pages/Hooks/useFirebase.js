@@ -1,5 +1,6 @@
 import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, onAuthStateChanged, signOut } from "firebase/auth";
 import { useEffect, useState } from "react";
+import { Navigate } from "react-router-dom";
 import initialiazeAuthentication from './../Authentication/Firebase/Firebase.init';
 
 
@@ -32,6 +33,7 @@ const useFirebase = () => {
                     body: JSON.stringify(newUser)
                 })
                     .then()
+                //redirecting
                 const redirectUri = location?.state?.from || "/home";
                 navigate(redirectUri);
             })
@@ -76,15 +78,15 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     }
 
-    const handleOldLogin = (email, password, location, history) => {
+    const handleOldLogin = (email, password, navigate, location) => {
         setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
                 setUser(user);
                 //redirecting
-                const destination = location?.state?.from || '/';
-                history.replace(destination);
+                const redirectUri = location?.state?.from || "/home";
+                navigate(redirectUri);
                 setError('')
             })
 
@@ -92,6 +94,7 @@ const useFirebase = () => {
                 setError(error.message);
             })
             .finally(() => setIsLoading(false));
+
     }
 
     useEffect(() => {

@@ -1,7 +1,6 @@
 import React from 'react';
 import useFirebase from './../Hooks/useFirebase';
 import { Link } from 'react-router-dom';
-import logo from '../../Media/img/logo.png';
 import './Header.css';
 const Header = () => {
     const { user, logOut, admin } = useFirebase();
@@ -10,7 +9,7 @@ const Header = () => {
         <div className='header'>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <img style={{ width: '14%' }} class="navbar-brand" src={`${logo}`} alt="Logo" />
+                    <h1 className='logo-font me-3'>Zenon</h1>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -50,10 +49,13 @@ const Header = () => {
                         </ul>
                     </div>
                     {
+                        user?.email && <h6 className='text-success me-4'>Welcome {user.displayName}!</h6>
+                    }
+                    {
                         user?.email ?
-                            <button onClick={logOut}>Log Out</button> :
+                            <button class="btn-contact-submit" onClick={logOut}>Log Out</button> :
                             <li class="nav-item" style={{ listStyle: "none" }}>
-                                <Link class="btn btn-primary" aria-current="page" to="/login">Login</Link>
+                                <Link class="btn-contact-submit" aria-current="page" to="/login">Login</Link>
                             </li>
                     }
                 </div>

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 import useFirebase from '../../Hooks/useFirebase';
-
+import './ApplyInfo.css';
 const ApplyInfo = () => {
     const [applicantInfo, setApplicantInfo] = useState({});
     const { user } = useFirebase();
+    const navigate = useNavigate();
     const handleOnChange = e => {
         const value = e.target.value;
         const field = e.target.name;
@@ -24,11 +26,20 @@ const ApplyInfo = () => {
                 "content-type": "application/json"
             },
             body: JSON.stringify(applicantInfo)
-        }).then()
+        }).then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    navigate("/submittedSuccess");
+                }
+                console.log(data)
+            })
     }
     return (
         <div>
-            <form onSubmit={handleApply} accept-charset="UTF-8" className="w-50 mx-auto text-start" enctype="multipart/form-data" target="_blank">
+
+            <h3 className='mt-4 text-success'>Apply Form</h3>
+            <hr width="20%" className="mx-auto" />
+            <form onSubmit={handleApply} accept-charset="UTF-8" className="w-50 mx-auto text-start apply-form" enctype="multipart/form-data" target="_blank">
                 <div class="form-group">
                     <label for="exampleInputName">Full Name</label>
                     <input onChange={handleOnChange} type="text" name="fullname" class="form-control mb-4 mb-4" id="exampleInputName" value={user.displayName} disabled />

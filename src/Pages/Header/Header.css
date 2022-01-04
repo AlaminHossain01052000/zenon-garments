@@ -1,23 +1,53 @@
+a{
+    text-decoration: none;
+}
+.logo-font{
+    font-family: 'Island Moments', cursive;
+    color:#1dd1a1;
+}
 .header{
     position: sticky;
     top: 0;
     z-index: 2;
 }
+
 .header .navbar{
     background-color: #fff;
 }
 .header .navbar-light .navbar-nav .nav-link{
     text-decoration: none;
-    color: #0B2B43;
+    color: #5f27cd;
     font-weight: 600;
     font-size: 15px;
     padding: 8px 10px;
 }
 .header .navbar-light .navbar-nav .nav-link:hover{
-    color: aqua;
+    color: black;
 }
 .userName{
     color: #0B2B43;
     margin-top: 11px;
     font-size: 12px;
 }
+.btn-contact-submit {background-image: linear-gradient(to right, #3CA55C 0%, #B5AC49  51%, #3CA55C  100%)}
+.btn-contact-submit {
+   margin: 10px 0px;
+   padding: 10px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+   border:0px;
+   font-family: 'Roboto', sans-serif;
+   text-decoration: none;
+ }
+
+ .btn-contact-submit:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }

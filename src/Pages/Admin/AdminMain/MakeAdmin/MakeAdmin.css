@@ -1,0 +1,23 @@
+
+         .btn-make-admin {background-image: linear-gradient(to right, #EDE574 0%, #E1F5C4  51%, #EDE574  100%)}
+         .btn-make-admin {
+            margin: 10px auto;
+            border:0px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+            
+          }
+
+          .btn-make-admin:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
