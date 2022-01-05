@@ -6,7 +6,8 @@ import AboutTextilery from './AboutTextilery/AboutTextilery';
 import Works from './Works/Works';
 import Team from './OurTeam/Team';
 import ContactBanner from './ContactBanner/ContactBanner';
-import Header from '../Header/header';
+import Header from '../Header/Header';
+
 
 const AboutUs = () => {
     return (

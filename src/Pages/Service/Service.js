@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../Header/header';
+import Header from '../Header/Header';
 import Pricing from '../Pricing/Pricing';
 import './Service.css';
 

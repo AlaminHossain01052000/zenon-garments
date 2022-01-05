@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, Navigate } from 'react-router-dom';
-import Header from '../Header/header';
+import Header from '../Header/Header';
 import './Pricing.css';
 
 const Pricing = () => {
