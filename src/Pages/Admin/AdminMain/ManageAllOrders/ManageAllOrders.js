@@ -3,13 +3,13 @@ import React, { useEffect, useState } from 'react';
 const ManageAllOrders = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/orders")
+        fetch("https://safe-sierra-40480.herokuapp.com/orders")
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [orders])
     console.log(orders);
     const handleChageStatus = (id) => {
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://safe-sierra-40480.herokuapp.com/orders/${id}`, {
             method: "PUT"
         }).then(res => res.json())
             .then(data => console.log(data))

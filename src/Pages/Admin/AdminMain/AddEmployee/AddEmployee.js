@@ -19,7 +19,7 @@ const AddEmployee = () => {
         e.preventDefault();
         // newEmployee.address.city = address;
         newEmployee.address = { city: address, phone: tel };
-        fetch("http://localhost:5000/employees", {
+        fetch("https://safe-sierra-40480.herokuapp.com/employees", {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -29,8 +29,10 @@ const AddEmployee = () => {
     }
     return (
         <div>
+            <div className='d-flex flex-column justify-content-center align-items-center'>
+                <h1 className='font-poppins text-success mt-5'>Add A Employee</h1>
 
-            <h1 className='font-poppins text-success mt-5'>Add A Employee</h1>
+            </div>
             <form onSubmit={handleEmployeeAdding} accept-charset="UTF-8" className="w-50 mx-auto text-start employee-adding-form" enctype="multipart/form-data" target="_blank">
 
                 <div class="form-group">

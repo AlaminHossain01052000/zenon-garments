@@ -8,7 +8,7 @@ const MakeAdmin = () => {
     }
     const handleMakingAdmin = e => {
         if (email) {
-            fetch(`http://localhost:5000/users?email=${email}`, {
+            fetch(`https://safe-sierra-40480.herokuapp.com/users?email=${email}`, {
                 method: "PUT"
 
             })
@@ -25,7 +25,10 @@ const MakeAdmin = () => {
     }
     return (
         <div>
-            <input type="email" style={{ backgroundColor: '#eee', border: "0px", outline: "0px", padding: '15px 30px', margin: "10px 0", borderRadius: "10px" }} placeholder='Enter Email' onChange={handleOnChange} required />
+            <div className='d-flex flex-column justify-content-center align-items-center'>
+                <input type="email" style={{ backgroundColor: '#eee', border: "0px", outline: "0px", padding: '15px 30px', margin: "10px 0", borderRadius: "10px" }} placeholder='Enter Email' onChange={handleOnChange} required />
+            </div>
+
             <button className='btn-make-admin' onClick={handleMakingAdmin}>Make Admin</button>
         </div>
     );

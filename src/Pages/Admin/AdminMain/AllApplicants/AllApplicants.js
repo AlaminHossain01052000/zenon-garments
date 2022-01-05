@@ -3,12 +3,12 @@ import React, { useEffect, useState } from 'react';
 const AllApplicants = () => {
     const [applicants, setApplicants] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/applicants")
+        fetch("https://safe-sierra-40480.herokuapp.com/applicants")
             .then(res => res.json())
             .then(data => setApplicants(data))
     }, [applicants])
     const handleChageStatus = (id) => {
-        fetch(`http://localhost:5000/applicants/${id}`, {
+        fetch(`https://safe-sierra-40480.herokuapp.com/applicants/${id}`, {
             method: "PUT"
 
 

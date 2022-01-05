@@ -9,7 +9,7 @@ const AllCarrerInfo = () => {
 
     const navigate = useNavigate();
     useEffect(() => {
-        fetch("http://localhost:5000/employees")
+        fetch("https://safe-sierra-40480.herokuapp.com/employees")
             .then(res => res.json())
             .then(data => setEmployees(data))
     }, [])

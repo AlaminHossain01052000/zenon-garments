@@ -20,7 +20,7 @@ const ApplyInfo = () => {
         applicantInfo.status = "waiting";
         applicantInfo.name = user.displayName;
         applicantInfo.email = user.email;
-        fetch("http://localhost:5000/applicants", {
+        fetch("https://safe-sierra-40480.herokuapp.com/applicants", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

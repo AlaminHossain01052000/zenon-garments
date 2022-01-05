@@ -7,7 +7,7 @@ const MyApplication = () => {
     const { user } = useAuth();
     console.log(user.email)
     useEffect(() => {
-        fetch(`http://localhost:5000/applicants/${user.email}`)
+        fetch(`https://safe-sierra-40480.herokuapp.com/applicants/${user.email}`)
             .then(res => res.json())
             .then(data => setApplication(data))
     }, [user])

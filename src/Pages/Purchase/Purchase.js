@@ -12,7 +12,7 @@ const Purchase = () => {
     console.log(id);
     const [selected, setSelected] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/pricings/${id}`)
+        fetch(`https://safe-sierra-40480.herokuapp.com/pricings/${id}`)
             .then(res => res.json())
             .then(data => setSelected(data))
     }, [id])

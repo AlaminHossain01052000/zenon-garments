@@ -25,7 +25,7 @@ const useAuth = () => {
 
                 const newUser = { displayName: result.user.displayName, email: result.user.email };
 
-                fetch("http://localhost:5000/users", {
+                fetch("https://safe-sierra-40480.herokuapp.com/users", {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"
@@ -58,7 +58,7 @@ const useAuth = () => {
 
                 });
 
-                fetch("http://localhost:5000/users", {
+                fetch("https://safe-sierra-40480.herokuapp.com/users", {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"
@@ -125,7 +125,7 @@ const useAuth = () => {
     // }
     useEffect(() => {
 
-        fetch(`http://localhost:5000/users/admin?email=${user.email}`)
+        fetch(`https://safe-sierra-40480.herokuapp.com/users/admin?email=${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setAdmin(data.admin)

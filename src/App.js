@@ -34,8 +34,8 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/contact_us" element={<ContactUs />} />
           <Route path="/all_career_info" element={<AllCarrerInfo />} />
-          <Route path="/apply" element={<ApplyInfo />} />
-          <Route path="/about_us" element={<AboutUs></AboutUs>} />
+          <Route path="/apply" element={<PrivateRoute><ApplyInfo /></PrivateRoute>} />
+          < Route path="/about_us" element={<AboutUs></AboutUs>} />
           <Route path="/register" element={<Register></Register>} />
           <Route path="/login" element={<Login></Login>} />
           <Route path="/submittedSuccess" element={<SuccessfullyApplied></SuccessfullyApplied>} />

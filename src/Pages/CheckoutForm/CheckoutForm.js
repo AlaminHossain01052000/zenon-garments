@@ -34,7 +34,7 @@ const CheckOutForm = ({ selected }) => {
             console.log(paymentMethod);
             paymentMethod.email = user.email;
             if (paymentMethod) {
-                fetch("http://localhost:5000/orders", {
+                fetch("https://safe-sierra-40480.herokuapp.com/orders", {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"
