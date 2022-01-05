@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+Project Name: Zenon-textile
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Team Members: 1.Alamin Hossain 2.Yasin Ahmed 3.Njamul Hasna Shanto 4.Sayen Sadh
 
-## Available Scripts
+Live Site Link:
 
-In the project directory, you can run:
+Technology Used: React js, React bootstrap, Bootstrap, Firebase Authentication,
+                    NodeJS(Express), MongoDB, Heroku(server deploy), firebase hosting(client site deploy)
 
-### `npm start`
+Feature:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+⚫Responsive MERN stack website where visitors can explore our Textile and its features.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+⚫On the home page, visitors can get an overview of our site and they can go to many pages like about us, contact, services, and many more. This routing is implemented by React Router.
 
-### `npm test`
+⚫There is a pricing section in Zenon-textile, there is three purchase plan. Customers can buy any of those plans and can add them to a cart. When they confirm to buy this plane they will be directed to the payment system method page, where they can select a payment method.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+⚫When an Admin approves that purchase plan then it will show to the customer that the purchase plan has been accepted.
 
-### `npm run build`
+⚫If customers are unable to pay full payment they can pay a half payment and the due status will be shown to the admin. If the full payment is done it will take to the shipment process page.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+⚫There is a chart which will show the last 10+ years data of the company’s growth.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+⚫here is a career section where a person can apply for the job/intern in Zenon-textile.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+⚫An authentication system has been implemented using firebase.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+⚫Customers can Log in/Register using a google or email password.

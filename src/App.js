@@ -40,7 +40,7 @@ function App() {
           <Route path="/login" element={<Login></Login>} />
           <Route path="/submittedSuccess" element={<SuccessfullyApplied></SuccessfullyApplied>} />
           <Route path="/service" element={<Service></Service>} />
-          <Route path="/pricing" element={<Pricing></Pricing>} />
+          <Route path="/pricings" element={<Pricing></Pricing>} />
           <Route path="/purchase/:id" element={<Purchase></Purchase>} />
           <Route path="/admin" element={
 
